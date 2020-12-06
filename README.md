@@ -34,4 +34,14 @@ NOTE: Make sure, when prompted, to give the tab permissions to send desktop noti
 
 ---
 
+## TARGET
+
+The Target script will simply check to see if the three "in stock" buttons are available on the page and determine which options is most optimal, then report the in stock item via a desktop notification.
+
+## PLAYSTATION DIRECT
+
+The Playstation Direct script will check either for the existence of the "ADD" button on the product page or if the website is hosing a queue for customers to get into the store. Either will send a desktop notification so you can get there as quickly as possible.
+
+---
+
 ![twitter](markdown_assets/twitter.png) [@dasginger](https://twitter.com/DasGinger) | ![github](markdown_assets/github.png) [My Code](https://github.com/DasGinger) | [:: email me ::](mailto:jcweber90@gmail.com)
