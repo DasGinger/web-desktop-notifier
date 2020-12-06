@@ -38,12 +38,16 @@ var siteTitle = document.querySelector('head title');
 
 try {
     if(!siteTitle.textContent.toLowerCase().includes('queue')){
+        while(addToCartBtn == null && outOfStockMsg == null) {
+            continue;
+        }
+
         if(outOfStockMsg.parentElement.classList.contains('hide')){
-            if(addToCartBtn !== null){
+            if(!addToCartBtn.classList.contains('hide')){
                 isInStock = true;
                 notificationTitle = `${productTitle} is in stock!`;
             } else {
-                throw 'No valid HTML elements are present on the webpage. Make sure you are on a product page on target.com';
+                throw 'No valid HTML elements are present on the webpage. Make sure you are on a product page on direct.playstation.com';
             }
         } else {
             // product is out of stock
