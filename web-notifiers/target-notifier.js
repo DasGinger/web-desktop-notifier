@@ -63,7 +63,7 @@ window.addEventListener('load', function(){
         body: `${productTitle} is now in stock and available via ${availabilityType}!\nClick this notification to view this product now.`,
         silent: false,
         icon: productImg,
-        tag: `target:${productTitle}`,
+        tag: `target:${productTitle.toLowerCase().replace(' ','_')}`,
         renotify: true,
         requireInteraction: true,
         vibrate: true

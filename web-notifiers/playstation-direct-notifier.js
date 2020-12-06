@@ -25,7 +25,7 @@ var n_options = {
     body: `${productTitle} is now in stock!\nClick this notification to view this product now.`,
     silent: false,
     icon: productImg,
-    tag: `playstation_direct:${productTitle}`,
+    tag: `playstation_direct:${productTitle.toLowerCase().replace(' ','_')}`,
     renotify: true,
     requireInteraction: true,
     vibrate: true
