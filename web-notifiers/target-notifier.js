@@ -23,10 +23,10 @@ window.addEventListener('load', function(){
     var productImg = document.querySelector('.slide--active a .slideDeckPicture div div div img').attributes['src'].value;
 
     // HTML elements on page
-    pickItUpBtn = document.querySelector('[data-test="orderPickupButton"]');
-    deliverItBtn = document.querySelector('[data-test="scheduledDeliveryButton"]');
-    shipItBtn = document.querySelector('[data-test="shipItButton"]');
-    outOfStockMsg = document.querySelector('[data-test="outOfStockMessage"]');
+    var pickItUpBtn = document.querySelector('[data-test="orderPickupButton"]');
+    var deliverItBtn = document.querySelector('[data-test="scheduledDeliveryButton"]');
+    var shipItBtn = document.querySelector('[data-test="shipItButton"]');
+    var outOfStockMsg = document.querySelector('[data-test="outOfStockMessage"]');
 
     // Check each button for a class named 'hide' denoting that it is hidden and unavailable
     // There is a heirachy of priority - realized by the below logic statement
