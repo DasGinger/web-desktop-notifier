@@ -42,56 +42,59 @@ const interval = setInterval(function(){
         // Check each button for a class named 'hide' denoting that it is hidden and unavailable
         // There is a heirachy of priority - realized by the below logic statement
         var doubleCheck = true;
-        while(true){
-            try{
-                console.log('NOTIFICATION: checking for HTML elements...');
-                if(outOfStockMsg == null){
-                    if(!shipItBtn.classList.contains('hide')){
-                        if(doubleCheck){
-                            doubleCheck = false;
-                            continue;
+        setTimeout(function(){
+            while(true){
+                try{
+                    console.log('NOTIFICATION: checking for HTML elements...');
+                    if(outOfStockMsg == null){
+                        if(!shipItBtn.classList.contains('hide')){
+                            if(doubleCheck){
+                                doubleCheck = false;
+                                continue;
+                            } else {
+                                console.log(shipItBtn);
+                                availabilityType = 'shipping';
+                                isInStock = true;
+                                break;
+                            }
+                        } else if (!deliverItBtn.classList.contains('hide')) {
+                            if(doubleCheck){
+                                doubleCheck = false;
+                                continue;
+                            } else {
+                                availabilityType = 'delivery';
+                                isInStock = true;
+                                break;
+                            }
+                        } else if (!pickItUpBtn.classList.contains('hide')) {
+                            if(doubleCheck){
+                                doubleCheck = false;
+                                continue;
+                            } else {
+                                availabilityType = 'pick up';
+                                isInStock = true;
+                                break;
+                            }
                         } else {
-                            availabilityType = 'shipping';
-                            isInStock = true;
+                            throw 'No valid HTML elements are present on the webpage. Make sure you are on a product page on target.com';
                             break;
                         }
-                    } else if (!deliverItBtn.classList.contains('hide')) {
-                        if(doubleCheck){
-                            doubleCheck = false;
-                            continue;
-                        } else {
-                            availabilityType = 'delivery';
-                            isInStock = true;
-                            break;
-                        }
-                    } else if (!pickItUpBtn.classList.contains('hide')) {
-                        if(doubleCheck){
-                            doubleCheck = false;
-                            continue;
-                        } else {
-                            availabilityType = 'pick up';
+                    } else if(backupStore !== null) {
+                        if(backupStore.textContent.toLowerCase().includes('in stock')){
+                            availabilityType = 'another store';
                             isInStock = true;
                             break;
                         }
                     } else {
-                        throw 'No valid HTML elements are present on the webpage. Make sure you are on a product page on target.com';
+                        // product is out of stock
+                        console.log(`${productTitle} is out of stock. Skipping notification...`);
                         break;
                     }
-                } else if(backupStore !== null) {
-                    if(backupStore.textContent.toLowerCase().includes('in stock')){
-                        availabilityType = 'another store';
-                        isInStock = true;
-                        break;
-                    }
-                } else {
-                    // product is out of stock
-                    console.log(`${productTitle} is out of stock. Skipping notification...`);
-                    break;
+                } catch(err) {
+                    console.log(err);
                 }
-            } catch(err) {
-                console.log(err);
             }
-        }
+        }, 2000);
     
         var notificationTitle = `${productTitle} :: ${toTitleCase(availabilityType)}`;
         var n_options = {
