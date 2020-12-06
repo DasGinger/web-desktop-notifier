@@ -11,6 +11,8 @@ _!! Tab Reloader !!_
 [Opera](https://addons.opera.com/en/extensions/details/tab-reloader/)
 [Edge](https://microsoftedge.microsoft.com/addons/detail/tab-reloader-page-auto-r/amclpbiglkmdhodbgnchnkmfdghnabik)
 
+**If you use FIREFOX** notifications do not make sounds. I recommend using the add-on [Notification Sound](https://addons.mozilla.org/en-US/firefox/addon/notification-sound/), plus you can customize the sound: 
+
 **How to Use These Scripts**
 
 I suggest using these settings for Tab Reloader:
