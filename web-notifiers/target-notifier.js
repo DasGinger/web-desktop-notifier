@@ -31,11 +31,12 @@ window.addEventListener('load', function(){
     // Check each button for a class named 'hide' denoting that it is hidden and unavailable
     // There is a heirachy of priority - realized by the below logic statement
     try{
+        while((shipItBtn == null && deliverItBtn == null && pickItUpBtn == null) && outOfStockMsg == null) {
+            continue;
+        }
+
         if(outOfStockMsg == null){
             // wait for elements to load - target's website is slow :)
-            while(shipItBtn == null || deliverItBtn == null || pickItUpBtn == null) {
-                continue;
-            }
             if(!shipItBtn.classList.contains('hide')){
                 availabilityType = 'shipping';
                 isInStock = true;
