@@ -5,9 +5,9 @@ This is a library of javascript snippets that can be used with various [auto ref
 
 ## Quick Links
 * [Auto Refresher Add-Ons](#arao)
-* [How to Use](htu)
-* [Target](target)
-* [Playstation Direct](psdirect)
+* [How to Use](#htu)
+* [Target](#target)
+* [Playstation Direct](#psdirect)
 
 ---
 
