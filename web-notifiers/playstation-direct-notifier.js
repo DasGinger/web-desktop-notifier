@@ -39,6 +39,7 @@ var siteTitle = document.querySelector('head title');
 try {
     if(!siteTitle.textContent.toLowerCase().includes('queue')){
         while(addToCartBtn == null && outOfStockMsg == null) {
+            console.log('WDN: Waiting for HTML elements to load...');
             continue;
         }
 
@@ -46,17 +47,19 @@ try {
             if(!addToCartBtn.classList.contains('hide')){
                 isInStock = true;
                 notificationTitle = `${productTitle} is in stock!`;
+                console.log(`WDN: ${notificationTitle} Generating notification now...`);
             } else {
                 throw 'No valid HTML elements are present on the webpage. Make sure you are on a product page on direct.playstation.com';
             }
         } else {
             // product is out of stock
-            console.log(`${productTitle} is out of stock. Skipping notification...`);
+            console.log(`WDN: ${productTitle} is out of stock. Skipping notification...`);
         }
     } else {
         queueIsLive = true;
         notificationTitle = 'Playstation Direct queue has started!';
         n_options.body = 'Click this notification to go to Playstation Direct and take your place in line. Good luck!';
+        console.log(`WDN: ${notificationTitle} Generating notification now...`);
     }
 } catch(err) {
     console.log(err);
