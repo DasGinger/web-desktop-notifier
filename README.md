@@ -3,7 +3,15 @@
 
 This is a library of javascript snippets that can be used with various [auto refresh browser add-ons](https://www.reddit.com/r/chrome/comments/8u89am/safe_and_reliable_auto_refresh/) in most modern browsers (quit using IE, please for all us). These scripts reference various HTML elements on the given store's product page and reports back via desktop notifications on product stock status.
 
-**My Suggestions on Add-Ons**
+## Quick Links
+* [Auto Refresher Add-Ons](#arao)
+* [How to Use](htu)
+* [Target](target)
+* [Playstation Direct](psdirect)
+
+---
+
+**<a name="arao"></a>My Suggestions on Add-Ons**
 
 _!! Tab Reloader !!_
 [Chrome](https://chrome.google.com/webstore/detail/tab-reloader-page-auto-re/dejobinhdiimklegodgbmbifijpppopn?hl=en)
@@ -13,7 +21,9 @@ _!! Tab Reloader !!_
 
 **If you use FIREFOX** notifications do not make sounds. I recommend using the add-on [Notification Sound](https://addons.mozilla.org/en-US/firefox/addon/notification-sound/), plus you can customize the sound: 
 
-**How to Use These Scripts**
+---
+
+**<a name="htu"></a>How to Use These Scripts**
 
 I suggest using these settings for Tab Reloader:
 
@@ -36,11 +46,19 @@ NOTE: Make sure, when prompted, to give the tab permissions to send desktop noti
 
 ---
 
-## TARGET
+## <a name="target"></a>TARGET
 
-The Target script will simply check to see if the three "in stock" buttons are available on the page and determine which options is most optimal, then report the in stock item via a desktop notification.
+**The number of seconds you want to refresh the page on should have 5 seconds added to it.**
 
-## PLAYSTATION DIRECT
+**Example**: If you want the page to refresh every 15 seconds, make the time 20 seconds.
+
+Target's website is relatively slow and the HTML elements that provide the ability to purchase an item via local order, local deliver, and shipping are espeically slow due to being affected by Javascript in the background after the page has fully loaded.
+
+Due to the above, this script is more complicated. The code here will use a timeout and wait for the HTML elements of the page to fully load before performing their functions. There is a hard-coded 5 second wait time. 
+
+Overall, this script will check for each possible availability option INCLUDING backup stores and report on their availability.
+
+## <a name="psdirect"></a>PLAYSTATION DIRECT
 
 The Playstation Direct script will check either for the existence of the "ADD" button on the product page or if the website is hosing a queue for customers to get into the store. Either will send a desktop notification so you can get there as quickly as possible.
 
