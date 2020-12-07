@@ -6,8 +6,9 @@ This is a library of javascript snippets that can be used with various [auto ref
 ## Quick Links
 * [Auto Refresher Add-Ons](#arao)
 * [How to Use](#htu)
-* [Target](#target)
+* [Amazon](#amazon)
 * [Playstation Direct](#psdirect)
+* [Target](#target)
 
 ---
 
@@ -46,6 +47,18 @@ NOTE: Make sure, when prompted, to give the tab permissions to send desktop noti
 
 ---
 
+## <a name="amazon"></a>AMAZON
+
+[Amazon Web Notifier Script](https://github.com/DasGinger/web-desktop-notifier/blob/master/web-notifiers/amazon-notifier.js)
+
+The Playstation Direct script will check either for the existence of the "ADD TO CART" button on the product page or the "OUT OF STOCK" message. Either will send a desktop notification so you can get there as quickly as possible.
+
+## <a name="psdirect"></a>PLAYSTATION DIRECT
+
+[Playstation Direct Web Notifier Script](https://github.com/DasGinger/web-desktop-notifier/blob/master/web-notifiers/playstation-direct-notifier.js)
+
+The Playstation Direct script will check either for the existence of the "ADD" button on the product page or if the website is hosing a queue for customers to get into the store. Either will send a desktop notification so you can get there as quickly as possible.
+
 ## <a name="target"></a>TARGET
 
 [Target Web Notifier Script](https://github.com/DasGinger/web-desktop-notifier/blob/master/web-notifiers/target-notifier.js)
@@ -59,12 +72,6 @@ Target's website is relatively slow and the HTML elements that provide the abili
 Due to the above, this script is more complicated. The code here will use a timeout and wait for the HTML elements of the page to fully load before performing their functions. There is a hard-coded 5 second wait time. 
 
 Overall, this script will check for each possible availability option INCLUDING backup stores and report on their availability.
-
-## <a name="psdirect"></a>PLAYSTATION DIRECT
-
-[Playstation Direct Web Notifier Script](https://github.com/DasGinger/web-desktop-notifier/blob/master/web-notifiers/playstation-direct-notifier.js)
-
-The Playstation Direct script will check either for the existence of the "ADD" button on the product page or if the website is hosing a queue for customers to get into the store. Either will send a desktop notification so you can get there as quickly as possible.
 
 ---
 
