@@ -157,6 +157,8 @@ const interval = setInterval(function(){
                     }
                     });
                 }
+            } else {
+                console.log(`This item is unavailable. Skipping notification...`);
             }
         }, 5000);
         clearInterval(interval);
