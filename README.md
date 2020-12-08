@@ -7,6 +7,7 @@ This is a library of javascript snippets that can be used with various [auto ref
 * [Auto Refresher Add-Ons](#arao)
 * [How to Use](#htu)
 * [Amazon](#amazon)
+* [Best Buy](#bestbuy)
 * [Playstation Direct](#psdirect)
 * [Target](#target)
 
@@ -51,7 +52,13 @@ NOTE: Make sure, when prompted, to give the tab permissions to send desktop noti
 
 [Amazon Web Notifier Script](https://github.com/DasGinger/web-desktop-notifier/blob/master/web-notifiers/amazon-notifier.js)
 
-The Playstation Direct script will check either for the existence of the "ADD TO CART" button on the product page or the "OUT OF STOCK" message. Either will send a desktop notification so you can get there as quickly as possible.
+The Amazon script will check either for the existence of the "ADD TO CART" button on the product page or the "OUT OF STOCK" message. Either will send a desktop notification so you can get there as quickly as possible.
+
+## <a name="bestbuy"></a>BEST BUY
+
+[Best Buy Web Notifier Script](https://github.com/DasGinger/web-desktop-notifier/blob/master/web-notifiers/best-buy-notifier.js)
+
+The Best Buy script will check either for the existence of the "ADD TO CART" button on the product page or the "OUT OF STOCK" message. Either will send a desktop notification so you can get there as quickly as possible.
 
 ## <a name="psdirect"></a>PLAYSTATION DIRECT
 
