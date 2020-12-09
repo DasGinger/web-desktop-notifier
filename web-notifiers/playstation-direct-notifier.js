@@ -35,9 +35,10 @@ var n_options = {
 var addToCartBtn = document.querySelector('[aria-label="Add to Cart"]');
 var outOfStockMsg = document.querySelector('.button-placeholder .out-stock-wrpr .sony-text-body-1');
 var siteTitle = document.querySelector('head title');
+var isRecaptchaForWaitingRoom = document.URL.includes('direct-queue.');
 
 try {
-    if(!siteTitle.textContent.toLowerCase().includes('queue')){
+    if(!siteTitle.textContent.toLowerCase().includes('queue') || !isRecaptchaForWaitingRoom){
         while(addToCartBtn == null && outOfStockMsg == null) {
             console.log('WDN: Waiting for HTML elements to load...');
             continue;
